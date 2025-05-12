@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>مطعم كسراوي | تجربة طعام راقية</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="العودة إلى الأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="#home">مطعم كسراوي</a></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="#menu" class="nav-link">القائمة</a></li>
+                    <li><a href="#gallery" class="nav-link">معرض الصور</a></li>
+                    <li><a href="#order" class="nav-link">الطلبات</a></li>
+                    <li><a href="#location" class="nav-link">موقعنا</a></li>
+                    <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Two Images -->
+    <section id="home" class="hero">
+        <div class="hero-images">
+            <div class="hero-image" role="button" aria-label="صورة المطعم - اضغط للتكبير">
+                <img src="imgs/m1.jpg" alt="صورة المطعم" class="hero-img scalable-img" data-original-src="imgs/m1.jpg">
+
+            </div>
+            <div class="hero-image" role="button" aria-label="صورة المطعم - اضغط للتكبير">
+                <img src="imgs/m2.jpg" alt="صورة المطعم" class="hero-img scalable-img" data-original-src="imgs/m2.jpg">
+
+            </div>
+        </div>
+        <div class="hero-content">
+            <h2>تجربة طعام فاخرة</h2>
+            <p>مأكولات راقية في أجواء أنيقة</p>
+            <a href="#menu" class="btn menu-btn">شاهد القائمة</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">قائمة الطعام</h2>
+            <div class="menu-tabs">
+                <div class="swipe-indicator swipe-right">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="menu-tabs-container" id="menu-tabs-container">
+                    <!-- Menu tabs will be generated here -->
+                </div>
+                <div class="swipe-indicator swipe-left">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+            </div>
+            <div id="menu-items" class="menu-container">
+                <!-- Menu items will be generated here -->
+                <div class="menu-loading">
+                    <div class="spinner"></div>
+                    <p>جاري تحميل القائمة...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">معرض الصور</h2>
+            <p class="section-description">استمتع بمشاهدة صور من مطعمنا وأطباقنا المميزة</p>
+
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="order">
+        <div class="container">
+            <h2 class="section-title">تقديم طلب</h2>
+
+            <div class="google-form-container">
+                <!-- Replace with a working Google Form embed code -->
+                <form id="google-order-form" class="custom-google-form">
+                    <div class="form-group">
+                        <label for="g-name">الاسم الكامل</label>
+                        <input type="text" id="g-name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="g-phone">رقم الهاتف</label>
+                        <input type="tel" id="g-phone" name="phoneNumber" placeholder="+20 10 66431343" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="g-order-type">نوع الطلب</label>
+                        <select id="g-order-type" name="tybe" required>
+                            <option value="">اختر نوع الطلب</option>
+                            <option value="delivery">توصيل</option>
+                            <option value="pickup">استلام من المطعم</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="g-order-items">الطلبات</label>
+                        <textarea id="g-order-items" name="order rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="g-address">العنوان (للتوصيل فقط)</label>
+                        <textarea id="g-address" name="entry.678901234" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="g-notes">ملاحظات إضافية</label>
+                        <textarea id="g-notes" name="entry.789012345" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn">إرسال الطلب</button>
+                </form>
+            </div>
+
+            <!-- Fallback Form in case Google Form doesn't load -->
+            <form id="order-form" class="fallback-form">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+20 10 66431343" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">التاريخ</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">الوقت</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="guests">عدد الضيوف</label>
+                    <input type="number" id="guests" name="guests" min="1" max="20" required>
+                </div> -->
+                <div class="form-group">
+                    <label for="special-requests">طلبات خاصة</label>
+                    <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn">إرسال الطلب</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Location Section with Google Maps -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title">موقعنا</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d371.4599003966756!2d30.758767477955296!3d28.09391171105911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sar!2seg!4v1747001092657!5m2!1sar!2seg"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="map-actions">
+                <a href="https://maps.app.goo.gl/63Ht16AzKaMNcDDK8" target="_blank" class="btn map-btn">
+                    <i class="fas fa-directions"></i> احصل على الاتجاهات
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">اتصل بنا</h2>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>العنوان</h3>
+                            <p>١٢٣ شارع الطعام، المدينة الطهوية</p>
+                            <a href="https://maps.app.goo.gl/63Ht16AzKaMNcDDK8" target="_blank" class="contact-action">
+                                <i class="fas fa-directions"></i> الحصول على الاتجاهات
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>اتصل بنا</h3>
+                            <p>
+                                <a href="tel:+201066431343" class="phone-link">+20 10 66431343</a>
+                            </p>
+                            <div class="contact-actions">
+                                <a href="tel:+201066431343" class="contact-action phone-action">
+                                    <i class="fas fa-phone"></i> اتصال
+                                </a>
+                                <a href="https://wa.me/201066431343" target="_blank" class="contact-action whatsapp-action">
+                                    <i class="fab fa-whatsapp"></i> واتساب
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>ساعات العمل</h3>
+                            <div class="working-hours">
+                                <div class="day-group">
+                                    <span class="days">الأحد - الخميس:</span>
+                                    <span class="hours">١١ صباحاً - ١٠ مساءً</span>
+                                </div>
+                                <div class="day-group">
+                                    <span class="days">الجمعة - السبت:</span>
+                                    <span class="hours">١٠ صباحاً - ١١ مساءً</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h3>أرسل لنا رسالة</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">الاسم</label>
+                            <input type="text" id="contact-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">رقم الهاتف</label>
+                            <input type="tel" id="contact-phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">الرسالة</label>
+                            <textarea id="contact-message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn contact-submit">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="social-contact">
+                <h3>تابعنا على وسائل التواصل الاجتماعي</h3>
+                <div class="social-icons-large">
+                    <a href="#" class="social-icon-large"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon-large"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon-large"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Social Media Icons -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>مطعم كسراوي</h3>
+                    <p>مأكولات فاخرة وخدمة استثنائية</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; ٢٠٢٥ مطعم كسراوي. جميع الحقوق محفوظة.</p>
+                <p class="developer-credit">Made by <a href="https://mr-samwel.rf.gd" target="_blank">Samwel Youssef</a></p>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
